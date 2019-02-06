@@ -1,0 +1,11 @@
+@RELATION TrainerConfig
+
+@ATTRIBUTE 'ProcessedFeaturesDescription' STRING
+@ATTRIBUTE 'AlgorithmId' STRING
+@ATTRIBUTE 'PreprocessingAlgorithmId' STRING
+@ATTRIBUTE 'GroundTruthSource' STRING
+@ATTRIBUTE 'GroundTruthSourceType' {'CATEGORY_ID','FILE_LIST','READY_INPUT'}
+@ATTRIBUTE 'PathToOutputModel' STRING
+
+@DATA
+'','0[0.25]','-1','0','CATEGORY_ID','C:\\Users\\NICOLAS\\Documents\\Cours\\M2\\Eclipse\\amuse\\Models\\0\\0[0.25]\\\\model.mod'

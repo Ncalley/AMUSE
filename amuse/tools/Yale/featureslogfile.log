@@ -1,0 +1,11 @@
+14 nov. 2018 21:17:41: [Warning] No filename given for result file, using stdout for logging results!
+14 nov. 2018 21:17:41: Experiment starts
+14 nov. 2018 21:17:41: Process 1/2: C:\Users\NICOLAS\Documents\Cours\M2\Eclipse\amuse\config\node\extractor\input\task_127\1\feature_def_rms512.arff: 1
+14 nov. 2018 21:17:41: [Error] AudioDataFactory: File 'feature_def_rms512.arff' could not be opened by JavaSoundAudioClip
+14 nov. 2018 21:17:41: [Error] Could not load audio stream since decoding was not provided!
+You have to download the library 'mp3plugin.jar' from 'http://java.sun.com/products/java-media/jmf/mp3/download.html' and copy it either into
+'YALE_HOME/lib' or into 'JAVA_HOME/lib/ext'. Then at least MP3 and Wave should be supported!
+14 nov. 2018 21:17:41: [Warning] java.lang.IllegalArgumentException: Could not open audio file: No AudioData instance could be provided for :file:/C:/Users/NICOLAS/Documents/Cours/M2/Eclipse/amuse/config/node/extractor/input/task_127/1/feature_def_rms512.arff: Cannot convert C:\Users\NICOLAS\Documents\Cours\M2\Eclipse\amuse\config\node\extractor\input\task_127\1\feature_def_rms512.arff: 1. Skip this file...
+14 nov. 2018 21:17:41: Process 2/2: C:\Users\NICOLAS\Documents\Cours\M2\Eclipse\amuse\config\node\extractor\input\task_127\1\Katekyo Hitman Reborn opening 2 [Boys & Girls].wav: 1
+14 nov. 2018 21:18:06: Experiment finished after 24 seconds
+14 nov. 2018 21:18:06: Experiment finished successfully

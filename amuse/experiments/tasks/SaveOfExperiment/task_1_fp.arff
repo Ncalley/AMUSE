@@ -1,0 +1,13 @@
+@RELATION ProcessorConfig
+
+@ATTRIBUTE 'FileList' STRING
+@ATTRIBUTE 'FeatureList' STRING
+@ATTRIBUTE 'ReductionSteps' STRING
+@ATTRIBUTE 'Unit' {'milliseconds'}
+@ATTRIBUTE 'PartitionSize' NUMERIC
+@ATTRIBUTE 'PartitionOverlap' NUMERIC
+@ATTRIBUTE 'MatrixToVectorMethod' STRING
+@ATTRIBUTE 'FeatureDescription' STRING
+
+@DATA
+'C:\\Users\\NICOLAS\\Documents\\Cours\\M2\\Eclipse\\amuse\\experiments\\tasks\\SaveOfExperiment\\filelists\\task_1_fp.arff','C:\\Users\\NICOLAS\\Documents\\Cours\\M2\\Eclipse\\amuse\\experiments\\tasks\\SaveOfExperiment\\featurelists\\task_1_fp.arff','1-5[75]','milliseconds',5000,2500,'0[true_true]',''

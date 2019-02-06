@@ -1,0 +1,16 @@
+@RELATION FeatureTable
+
+@ATTRIBUTE 'Id' NUMERIC
+@ATTRIBUTE 'Description' STRING
+@ATTRIBUTE 'ExtractorId' NUMERIC
+@ATTRIBUTE 'WindowSize' NUMERIC
+@ATTRIBUTE 'Dimensions' NUMERIC
+@ATTRIBUTE 'FeatureType' {'WindowedNumeric','WindowedNumeric','WindowedNumeric','WindowedNumeric','WindowedNumeric','WindowedNumeric'}
+
+@DATA
+0,'Zero-crossing rate',0,512,1,'WindowedNumeric'
+1,'Linear prediction coefficients',0,512,10,'WindowedNumeric'
+2,'Average distance between extremal spectral values and its variance',1,512,2,'WindowedNumeric'
+3,'Average distance between zero-crossings of the time-domain signal and its variance',1,512,2,'WindowedNumeric'
+4,'Root mean square',0,512,1,'WindowedNumeric'
+6,'Low energy',0,512,1,'WindowedNumeric'

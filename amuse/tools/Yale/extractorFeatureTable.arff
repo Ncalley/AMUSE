@@ -1,0 +1,34 @@
+@relation 'Music feature'
+
+@attribute Id numeric
+@attribute Description string
+@attribute Dimensions numeric
+@attribute Consider numeric
+
+@data
+401,Tempo,1,1
+405,'First periodicity peak in bpm',1,1
+406,'Second periodicity peak in bpm',1,1
+3,'Average distance between zero-crossings of the time-domain signal and its variance',2,1
+32,'Angles in phase domain',1,1
+33,'Distances in phase domain',1,1
+2,'Average distance between extremal spectral values and its variance',2,1
+14,'Spectral centroid',1,1
+211,'Amplitude, position and width of 1st spectral peak',3,1
+212,'Amplitude, position and width of 2nd spectral peak',3,1
+213,'Amplitude, position and width of 3rd spectral peak',3,1
+214,'Amplitude, position and width of 4th spectral peak',3,1
+215,'Amplitude, position and width of 5th spectral peak',3,1
+16,'Spectral bandwidth',1,1
+25,'Sub-band energy ratio',4,1
+21,'Spectral extent',1,1
+19,'Spectral crest factor',4,1
+20,'Spectral flatness measure',4,1
+207,'Tone with maximum strength in the chromagram',1,1
+205,'Amplitude of maximum in the chromagram',1,1
+204,'Chroma vector',24,1
+29,'Spectral slope',1,1
+30,'y-axis intercept',1,1
+31,Discrepancy,1,1
+17,'Spectral skewness',1,1
+18,'Spectral kurtosis',1,1

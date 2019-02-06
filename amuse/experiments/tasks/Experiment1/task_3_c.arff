@@ -1,0 +1,13 @@
+@RELATION ClassifierConfiguration
+
+@ATTRIBUTE 'InputFileList' STRING
+@ATTRIBUTE 'ProcessedFeaturesDescription' STRING
+@ATTRIBUTE 'AlgorithmId' STRING
+@ATTRIBUTE 'GroundTruthSource' STRING
+@ATTRIBUTE 'GroundTruthSourceType' {'CATEGORY_ID','FILE_LIST','READY_INPUT'}
+@ATTRIBUTE 'MergeSongResults' NUMERIC
+@ATTRIBUTE 'OutputResult' STRING
+@ATTRIBUTE 'InputSourceType' {'FILE_LIST','READY_INPUT'}
+
+@DATA
+'C:\\Users\\NICOLAS\\Documents\\Cours\\M2\\Eclipse\\amuse\\experiments\\tasks\\Experiment1\\filelists\\task_3_c.arff','','0[0.25]','0','CATEGORY_ID',1,'C:\\Users\\NICOLAS\\Documents\\Cours\\M2\\Eclipse\\amuse\\experiments\\TestAllResult.arff','FILE_LIST'

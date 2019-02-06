@@ -1,0 +1,8 @@
+@RELATION categories
+
+@ATTRIBUTE Id NUMERIC
+@ATTRIBUTE Path STRING
+@ATTRIBUTE CategoryName STRING
+
+@DATA
+0,’C:\\Users\\NICOLAS\\Documents\\Cours\\M2\\Eclipse\\amuse\\Categories\\nightcore.arff’,Nightcore

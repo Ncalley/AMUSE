@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.amuse</groupId>
+  <artifactId>Amuse-maven</artifactId>
+  <name>Amuse-maven</name>
+  <version>0.2.1-SNAPSHOT</version>
+  <description>The version of amuse project using maven</description>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <mainClass>amuse.scheduler.gui.controller.WizardController</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>2.1</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <transformers>
+                <transformer>
+                  <mainClass>amuse.scheduler.gui.controller.WizardController</mainClass>
+                </transformer>
+              </transformers>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <dependency>
+      <groupId>com.xerces.jaudio</groupId>
+      <artifactId>jaudio</artifactId>
+      <version>5.0</version>
+      <scope>system</scope>
+      <systemPath>C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\Amuse-maven/lib/jAudio.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.apache.jl</groupId>
+      <artifactId>jl</artifactId>
+      <version>1.0</version>
+      <scope>system</scope>
+      <systemPath>C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\Amuse-maven/lib/jl1.0.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.apache.rapidminer</groupId>
+      <artifactId>rapidminer</artifactId>
+      <version>5.3.015</version>
+      <scope>system</scope>
+      <systemPath>C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\Amuse-maven/lib/rapidminer.jar</systemPath>
+    </dependency>
+  </dependencies>
+  <properties>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <java.version>1.8</java.version>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
+</project>
+

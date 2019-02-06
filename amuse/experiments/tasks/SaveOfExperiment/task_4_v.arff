@@ -1,0 +1,11 @@
+@RELATION ValidatorConfig
+
+@ATTRIBUTE 'ValidationMethodId' STRING
+@ATTRIBUTE 'MeasureList' STRING
+@ATTRIBUTE 'ProcessedFeaturesDescription' STRING
+@ATTRIBUTE 'InputToValidate' STRING
+@ATTRIBUTE 'GroundTruthSourceType' {'CATEGORY_ID','FILE_LIST','READY_INPUT'}
+@ATTRIBUTE 'ClassificationAlgorithmId' STRING
+
+@DATA
+'0[||]','C:\\Users\\NICOLAS\\Documents\\Cours\\M2\\Eclipse\\amuse\\experiments\\tasks\\SaveOfExperiment\\measureTables\\task_4_v.arff','1-5[75]__0[true_true]__5000ms_2500ms','0','CATEGORY_ID','0[0.25]'

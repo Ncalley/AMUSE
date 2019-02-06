@@ -1,7 +1,7 @@
 @RELATION 'Annotation Attribute Table'
-%rows=15
+%rows=10
 %columns=3
-%max id=9
+%max id=10
 
 @ATTRIBUTE 'ID' NUMERIC
 @ATTRIBUTE 'Attribute Type' STRING
@@ -16,3 +16,4 @@
 7, Numeric, 'Number of Instruments'
 8, String, 'Lyrics'
 9, {'Tonika','Subdominante','Dominante'}, 'Kadenz'
+10, Numeric, 'test'

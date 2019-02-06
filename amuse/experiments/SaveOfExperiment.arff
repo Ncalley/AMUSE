@@ -1,0 +1,12 @@
+@RELATION 'AMUSE Tasks'
+%rows=5
+%columns=2
+@ATTRIBUTE Type {c,fe,o,fp,ct,v}
+@ATTRIBUTE Path STRING
+
+@DATA
+fe,'C:\Users\NICOLAS\Documents\Cours\M2\Eclipse\amuse\experiments\tasks\SaveOfExperiment\task_0_fe.arff'
+fp,'C:\Users\NICOLAS\Documents\Cours\M2\Eclipse\amuse\experiments\tasks\SaveOfExperiment\task_1_fp.arff'
+ct,'C:\Users\NICOLAS\Documents\Cours\M2\Eclipse\amuse\experiments\tasks\SaveOfExperiment\task_2_ct.arff'
+c,'C:\Users\NICOLAS\Documents\Cours\M2\Eclipse\amuse\experiments\tasks\SaveOfExperiment\task_3_c.arff'
+v,'C:\Users\NICOLAS\Documents\Cours\M2\Eclipse\amuse\experiments\tasks\SaveOfExperiment\task_4_v.arff'

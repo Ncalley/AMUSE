@@ -1,0 +1,37 @@
+@RELATION Category
+
+@ATTRIBUTE 'Id' NUMERIC
+@ATTRIBUTE 'Name' STRING
+@ATTRIBUTE 'OptimalValue' NUMERIC
+@ATTRIBUTE 'Category' {'Data reduction','Data reduction','Data reduction','Confusion matrix','Confusion matrix','Confusion matrix','Confusion matrix','Standard measures','Standard measures','Standard measures','Standard measures','Standard measures','Recall and specificity combinations','Recall and specificity combinations','Recall and specificity combinations','Recall and specificity combinations','Song list','Measured error','Measured error','Measured error','Correlation-based measures','Correlation-based measures','Correlation-based measures'}
+@ATTRIBUTE 'MeasureClass' STRING
+@ATTRIBUTE 'CalculateForSongs' {'true','false'}
+@ATTRIBUTE 'CalculateForPartitions' {'true','false'}
+@ATTRIBUTE 'SupportsBinary' STRING
+@ATTRIBUTE 'SupportsMulticlass' STRING
+@ATTRIBUTE 'SupportsFuzzy' STRING
+
+@DATA
+0,'Ratio of used raw time windows',-1,'Data reduction','amuse.nodes.validator.measures.datareduction.RatioOfUsedRawTimeWindows','true','true','true','false','false'
+1,'Feature matrix reduction rate',-1,'Data reduction','amuse.nodes.validator.measures.datareduction.FeatureMatrixReductionRate','true','true','true','false','false'
+2,'Feature vector reduction rate',-1,'Data reduction','amuse.nodes.validator.measures.datareduction.FeatureVectorReductionRate','true','true','true','false','false'
+100,'True positives',-1,'Confusion matrix','amuse.nodes.validator.measures.confusionmatrix.base.TruePositives','true','true','true','false','false'
+101,'True negatives',-1,'Confusion matrix','amuse.nodes.validator.measures.confusionmatrix.base.TrueNegatives','true','true','true','false','false'
+102,'False positives',-1,'Confusion matrix','amuse.nodes.validator.measures.confusionmatrix.base.FalsePositives','true','true','true','false','false'
+103,'False negatives',-1,'Confusion matrix','amuse.nodes.validator.measures.confusionmatrix.base.FalseNegatives','true','true','true','false','false'
+104,'Accuracy',1,'Standard measures','amuse.nodes.validator.measures.confusionmatrix.Accuracy','true','true','true','true','false'
+105,'Precision',-1,'Standard measures','amuse.nodes.validator.measures.confusionmatrix.Precision','true','true','true','true','false'
+106,'Recall',-1,'Standard measures','amuse.nodes.validator.measures.confusionmatrix.Recall','true','true','true','true','false'
+107,'Specificity',-1,'Standard measures','amuse.nodes.validator.measures.confusionmatrix.Specificity','true','true','true','false','false'
+108,'F1-measure',-1,'Standard measures','amuse.nodes.validator.measures.confusionmatrix.FMeasure','true','true','true','true','false'
+110,'Youden\'s index',-1,'Recall and specificity combinations','amuse.nodes.validator.measures.confusionmatrix.YoudensIndex','true','true','true','false','false'
+111,'Likelihoods',-1,'Recall and specificity combinations','amuse.nodes.validator.measures.confusionmatrix.Likelihoods','true','true','true','false','false'
+112,'Discriminant power',-1,'Recall and specificity combinations','amuse.nodes.validator.measures.confusionmatrix.DiscriminantPower','true','true','true','false','false'
+113,'Geometric means',-1,'Recall and specificity combinations','amuse.nodes.validator.measures.confusionmatrix.GeometricMeans','true','true','true','false','false'
+114,'List of correctly predicted instances',-1,'Song list','amuse.nodes.validator.measures.confusionmatrix.base.ListOfCorrectlyPredictedInstances','true','false','true','true','true'
+200,'Absolute error',0,'Measured error','amuse.nodes.validator.measures.AbsoluteError','true','true','true','true','true'
+201,'Relative error',0,'Measured error','amuse.nodes.validator.measures.RelativeError','true','true','true','true','true'
+202,'Mean squared error',0,'Measured error','amuse.nodes.validator.measures.MeanSquaredError','true','true','true','true','true'
+300,'Standard correlation coefficient',1,'Correlation-based measures','amuse.nodes.validator.measures.correlation.StandardCorrelationCoefficient','true','true','true','true','true'
+301,'Spearman\'s Rho',1,'Correlation-based measures','amuse.nodes.validator.measures.correlation.SpearmansRhoRankCorrelation','true','true','true','true','true'
+302,'Kendal\'s Tau',1,'Correlation-based measures','amuse.nodes.validator.measures.correlation.KendallsTauRankCorrelation','true','false','true','true','true'

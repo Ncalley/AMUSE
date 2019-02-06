@@ -1,0 +1,7 @@
+@RELATION ExtractorConfig
+
+@ATTRIBUTE 'MusicFileList' STRING
+@ATTRIBUTE 'FeatureTable' STRING
+
+@DATA
+'C:\\Users\\NICOLAS\\Documents\\Cours\\M2\\Eclipse\\amuse\\experiments\\tasks\\Experiment1\\filelists\\task_0_fe.arff','C:\\Users\\NICOLAS\\Documents\\Cours\\M2\\Eclipse\\amuse\\experiments\\tasks\\Experiment1\\featurelists\\task_0_fe.arff'

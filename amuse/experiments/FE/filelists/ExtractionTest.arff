@@ -1,0 +1,9 @@
+@RELATION FileTable
+
+@ATTRIBUTE 'Id' NUMERIC
+@ATTRIBUTE 'Path' STRING
+
+@DATA
+1,'C:\\Users\\NICOLAS\\Documents\\Cours\\M2\\Eclipse\\amuse\\Database\\[JPz Central] It\'s Not Like I Like You!! (feat. Emirichu, Static-P & Amree).mp3'
+2,'C:\\Users\\NICOLAS\\Documents\\Cours\\M2\\Eclipse\\amuse\\Database\\Bigflo & Oli - Dommage.mp3'
+3,'C:\\Users\\NICOLAS\\Documents\\Cours\\M2\\Eclipse\\amuse\\Database\\S vs L (Clash des filières).mp3'

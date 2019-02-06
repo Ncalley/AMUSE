@@ -1,0 +1,14 @@
+[Warning: Unrecognized command line option: nodisplay.] 
+ 
+For online documentation, see https://www.mathworks.com/support
+For product information, visit www.mathworks.com.
+ 
+{Error using audioread (line 90)
+The filename specified was not found in the MATLAB path.
+
+Error in amuse_audio_read (line 7)
+        [y, Fs] = audioread(filename);
+
+Error in matlabBaseModified (line 28)
+[x,fs] = amuse_audio_read(input_file);
+} 
