@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.amuse</groupId>
   <artifactId>Amuse-maven</artifactId>
-  <version>0.2.1-SNAPSHOT</version>
+  <version>0.3.1-SNAPSHOT</version>
   <name>Amuse-maven</name>
   <description>The version of amuse project using maven</description>
   
@@ -12,7 +12,28 @@
         <java.version>1.8</java.version>
         <maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-    </properties>
+		
+		<!-- Dependencies versions -->
+		<version.jama>1.0.3</version.jama>
+		<version.xmlpull>1.1.3.4d_b4_min</version.xmlpull>
+		<version.log4j>1.2.16</version.log4j>
+		<version.miglayout>3.7</version.miglayout>
+		<version.tritonous-share>0.3.7.4</version.tritonous-share>
+		<version.xercesImpl>2.12.0</version.xercesImpl>
+		<version.xpp3>1.1.3.4.O</version.xpp3>
+		<version.xstream>1.4.11.1</version.xstream>
+		<version.commons-codec>1.11</version.commons-codec>
+		<version.jhall>2.0</version.jhall>
+		<version.jlfgr>1_0</version.jlfgr>
+		<version.weka-stable>3.6.14</version.weka-stable>
+		<version.javafx-base>11.0.1</version.javafx-base>
+		<version.deeplearning4j-core>0.9.1</version.deeplearning4j-core>
+		<version.deeplearning4j-keras>0.9.1</version.deeplearning4j-keras>
+		<version.deeplearning4j-nn>0.9.1</version.deeplearning4j-nn>
+		<version.jaudio>5.0</version.jaudio>
+		<version.jl>1.0</version.jl>
+		<version.rapidminer>5.3.015</version.rapidminer>
+  </properties>
 
 	
   <dependencies>
@@ -20,13 +41,13 @@
 	<dependency>
 	    <groupId>gov.nist.math</groupId>
 	    <artifactId>jama</artifactId>
-	    <version>1.0.3</version>
+	    <version>${version.jama}</version>
 	</dependency>
   	<!-- https://mvnrepository.com/artifact/xmlpull/xmlpull -->
 	<dependency>
 	    <groupId>xmlpull</groupId>
 	    <artifactId>xmlpull</artifactId>
-	    <version>1.1.3.4d_b4_min</version>
+	    <version>${version.xmlpull}</version>
 	</dependency>
 	
 	
@@ -34,96 +55,110 @@
 	<dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
-      <version>1.2.16</version>
+      <version>${version.log4j}</version>
       
     </dependency>
 	<!-- https://mvnrepository.com/artifact/com.miglayout/miglayout -->
 	<dependency>
 	    <groupId>com.miglayout</groupId>
 	    <artifactId>miglayout</artifactId>
-	    <version>3.7</version>
+	    <version>${version.miglayout}</version>
 	</dependency>
-	<!-- https://mvnrepository.com/artifact/org.tritonus/tritonus-share -->
-	<!-- <dependency>
-	    <groupId>org.tritonus</groupId>
-	    <artifactId>tritonus-share</artifactId>
-	    <version>0.3.6</version>
-	</dependency> -->
 	<!-- https://mvnrepository.com/artifact/com.googlecode.soundlibs/tritonus-share -->
 	<dependency>
 	    <groupId>com.googlecode.soundlibs</groupId>
 	    <artifactId>tritonus-share</artifactId>
-	    <version>0.3.7.4</version>
+	    <version>${version.tritonous-share}</version>
 	</dependency>
 
 	<!-- https://mvnrepository.com/artifact/xerces/xercesImpl -->
 	<dependency>
 	    <groupId>xerces</groupId>
 	    <artifactId>xercesImpl</artifactId>
-	    <version>2.12.0</version>
+	    <version>${version.xercesImpl}</version>
 	</dependency>
 	<!-- https://mvnrepository.com/artifact/xpp3/xpp3 -->
 	<dependency>
 	    <groupId>xpp3</groupId>
 	    <artifactId>xpp3</artifactId>
-	    <version>1.1.3.4.O</version>
+	    <version>${version.xpp3}</version>
 	</dependency>
 	<!-- https://mvnrepository.com/artifact/com.thoughtworks.xstream/xstream -->
 	<dependency>
 	    <groupId>com.thoughtworks.xstream</groupId>
 	    <artifactId>xstream</artifactId>
-	    <version>1.4.11.1</version>
+	    <version>${version.xstream}</version>
 	</dependency>
 	<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
 	<dependency>
 	    <groupId>commons-codec</groupId>
 	    <artifactId>commons-codec</artifactId>
-	    <version>1.11</version>
+	    <version>${version.commons-codec}</version>
 	</dependency>
 	<!-- https://mvnrepository.com/artifact/com.sun.woodstock.dependlibs/jhall -->
 	<dependency>
 	    <groupId>com.sun.woodstock.dependlibs</groupId>
 	    <artifactId>jhall</artifactId>
-	    <version>2.0</version>
+	    <version>${version.jhall}</version>
 	</dependency>
 	<!-- https://mvnrepository.com/artifact/net.java.linoleum/jlfgr -->
 	<dependency>
 	    <groupId>net.java.linoleum</groupId>
 	    <artifactId>jlfgr</artifactId>
-	    <version>1_0</version>
+	    <version>${version.jlfgr}</version>
 	</dependency>
 	<!-- https://mvnrepository.com/artifact/nz.ac.waikato.cms.weka/weka-stable -->
 	<dependency>
 	    <groupId>nz.ac.waikato.cms.weka</groupId>
 	    <artifactId>weka-stable</artifactId>
-	    <version>3.6.14</version>
+	    <version>${version.weka-stable}</version>
 	</dependency>
 	<!-- https://mvnrepository.com/artifact/org.openjfx/javafx-base -->
 	<dependency>
 	    <groupId>org.openjfx</groupId>
 	    <artifactId>javafx-base</artifactId>
-	    <version>11.0.1</version>
+	    <version>${version.javafx-base}</version>
+	</dependency>
+	
+	<!-- Keras related dependencies -->
+	<!-- https://mvnrepository.com/artifact/org.deeplearning4j/deeplearning4j-core -->
+	<dependency>
+	    <groupId>org.deeplearning4j</groupId>
+	    <artifactId>deeplearning4j-core</artifactId>
+	    <version>${version.deeplearning4j-core}</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.deeplearning4j/deeplearning4j-keras -->
+	<dependency>
+	    <groupId>org.deeplearning4j</groupId>
+	    <artifactId>deeplearning4j-keras</artifactId>
+	    <version>${version.deeplearning4j-keras}</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.deeplearning4j/deeplearning4j-nn -->
+	<dependency>
+	    <groupId>org.deeplearning4j</groupId>
+	    <artifactId>deeplearning4j-nn</artifactId>
+	    <version>${version.deeplearning4j-nn}</version>
 	</dependency>
 	
 	<!-- The three custom libraries -->
 	<dependency>
 		<groupId>com.xerces.jaudio</groupId>
 		<artifactId>jaudio</artifactId>
-		<version>5.0</version>
+		<version>${version.jaudio}</version>
 		<scope>system</scope>
 		<systemPath>${basedir}/lib/jAudio.jar</systemPath>
 	</dependency>
 	<dependency>
 		<groupId>com.apache.jl</groupId>
 		<artifactId>jl</artifactId>
-		<version>1.0</version>
+		<version>${version.jl}</version>
 		<scope>system</scope>
 		<systemPath>${basedir}/lib/jl1.0.jar</systemPath>
 	</dependency>
 	<dependency>
 		<groupId>com.apache.rapidminer</groupId>
 		<artifactId>rapidminer</artifactId>
-		<version>5.3.015</version>
+		<version>${version.rapidminer}</version>
 		<scope>system</scope>
 		<systemPath>${basedir}/lib/rapidminer.jar</systemPath>
 	</dependency>
