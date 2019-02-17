@@ -8,6 +8,7 @@ amuse/Models/
 amuse/Processed_Features/
 .project
 .classpath
+amuse/.pydevproject
 
 
 # Compiled source #

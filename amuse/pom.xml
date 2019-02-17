@@ -33,6 +33,7 @@
 		<version.jaudio>5.0</version.jaudio>
 		<version.jl>1.0</version.jl>
 		<version.rapidminer>5.3.015</version.rapidminer>
+		<version.junit-jupiter>5.4.0</version.junit-jupiter>
   </properties>
 
 	
@@ -138,6 +139,13 @@
 	    <groupId>org.deeplearning4j</groupId>
 	    <artifactId>deeplearning4j-nn</artifactId>
 	    <version>${version.deeplearning4j-nn}</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+	<dependency>
+	    <groupId>org.junit.jupiter</groupId>
+	    <artifactId>junit-jupiter-api</artifactId>
+	    <version>${version.junit-jupiter}</version>
+	    <scope>test</scope>
 	</dependency>
 	
 	<!-- The three custom libraries -->
