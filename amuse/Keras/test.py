@@ -8,4 +8,4 @@ model.add(Dense(units=64, activation='relu', input_dim=100))
 model.add(Dense(units=10, activation='softmax'))
 model.compile(loss='categorical_crossentropy',optimizer='sgd', metrics=['accuracy'])
 
-model.save('Models/simple_mlp.h5')
+model.save('Models/model.h5')

@@ -21,7 +21,18 @@ public class KerasControllerTest {
 	}
 	
 	@Test
-	void TestShosResults() {
+	void TestShowResults() {
 		assertTrue(k.showFiles());
+	}
+	
+	@Test
+	void Test() {
+		try {
+			k.importFiles();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			fail("Exception thrown");
+		}
 	}
 }

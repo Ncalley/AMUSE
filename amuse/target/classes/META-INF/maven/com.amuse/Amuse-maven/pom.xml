@@ -27,9 +27,12 @@
 		<version.jlfgr>1_0</version.jlfgr>
 		<version.weka-stable>3.6.14</version.weka-stable>
 		<version.javafx-base>11.0.1</version.javafx-base>
-		<version.deeplearning4j-core>0.9.1</version.deeplearning4j-core>
+		<version.nd4j-native-platform>1.0.0-beta3</version.nd4j-native-platform>
+		<version.datavec-api>1.0.0-beta3</version.datavec-api>
+		<version.deeplearning4j-core>1.0.0-beta3</version.deeplearning4j-core>
 		<version.deeplearning4j-keras>0.9.1</version.deeplearning4j-keras>
-		<version.deeplearning4j-nn>0.9.1</version.deeplearning4j-nn>
+		<version.deeplearning4j-nn>1.0.0-beta3</version.deeplearning4j-nn>
+		<version.deeplearning4j-modelimport>1.0.0-beta3</version.deeplearning4j-modelimport>
 		<version.jaudio>5.0</version.jaudio>
 		<version.jl>1.0</version.jl>
 		<version.rapidminer>5.3.015</version.rapidminer>
@@ -122,6 +125,18 @@
 	</dependency>
 	
 	<!-- Keras related dependencies -->
+	<!-- https://mvnrepository.com/artifact/org.nd4j/nd4j-native-platform -->
+	<dependency>
+	    <groupId>org.nd4j</groupId>
+	    <artifactId>nd4j-native-platform</artifactId>
+	    <version>${version.nd4j-native-platform}</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.datavec/datavec-api -->
+	<dependency>
+	    <groupId>org.datavec</groupId>
+	    <artifactId>datavec-api</artifactId>
+	    <version>${version.datavec-api}</version>
+	</dependency>
 	<!-- https://mvnrepository.com/artifact/org.deeplearning4j/deeplearning4j-core -->
 	<dependency>
 	    <groupId>org.deeplearning4j</groupId>
@@ -140,6 +155,13 @@
 	    <artifactId>deeplearning4j-nn</artifactId>
 	    <version>${version.deeplearning4j-nn}</version>
 	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.deeplearning4j/deeplearning4j-modelimport -->
+	<dependency>
+	    <groupId>org.deeplearning4j</groupId>
+	    <artifactId>deeplearning4j-modelimport</artifactId>
+	    <version>${version.deeplearning4j-modelimport}</version>
+	</dependency>
+	
 	<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
 	<dependency>
 	    <groupId>org.junit.jupiter</groupId>

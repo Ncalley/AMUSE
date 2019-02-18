@@ -5,9 +5,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.datavec.api.util.ClassPathResource;
-import org.deeplearning4j.nn.modelimport.keras.InvalidKerasConfigurationException;
 import org.deeplearning4j.nn.modelimport.keras.KerasModelImport;
-import org.deeplearning4j.nn.modelimport.keras.UnsupportedKerasConfigurationException;
+import org.deeplearning4j.nn.modelimport.keras.exceptions.InvalidKerasConfigurationException;
+import org.deeplearning4j.nn.modelimport.keras.exceptions.UnsupportedKerasConfigurationException;
 import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
 
 /**
@@ -90,12 +90,12 @@ public class KerasController {
 		MultiLayerNetwork model = null;
 		try {
 			//String simpleMlp = new ClassPathResource(filePath).getFile().getPath();
-			model = KerasModelImport.importKerasSequentialModelAndWeights(filePath);
+			model = KerasModelImport.importKerasSequentialModelAndWeights(filePath,true);
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}catch (InvalidKerasConfigurationException e) {
+		} catch (InvalidKerasConfigurationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (UnsupportedKerasConfigurationException e) {
