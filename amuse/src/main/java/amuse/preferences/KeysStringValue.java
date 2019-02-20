@@ -48,6 +48,7 @@ public enum KeysStringValue {
     MODEL_DATABASE, 
     MEASURE_DATABASE, 
     OPTIMIZATION_DATABASE,
+    KERAS_DATABASE,
     GRID_SCRIPT_EXTRACTOR, 
     GRID_SCRIPT_PROCESSOR, 
     GRID_SCRIPT_TRAINER, 
@@ -97,6 +98,7 @@ public enum KeysStringValue {
             case PROCESSED_FEATURE_DATABASE:
             case MODEL_DATABASE:
             case OPTIMIZATION_DATABASE:
+            case KERAS_DATABASE:
                 return new File(value).isDirectory();
             case AMUSE_PATH:
                 // Check if it is actually a Directory.
@@ -159,6 +161,7 @@ public enum KeysStringValue {
 		map.put(MULTIPLE_TRACKS_ANNOTATION_DATABASE.toString(), "Absolute path to database folder with annotations for multiple tacks:");
 		map.put(FEATURE_DATABASE.toString(), "Absolute path to database folder with features:");
 		map.put(OPTIMIZATION_DATABASE.toString(), "Absolute path to database folder with optimization results:");
+		map.put(KERAS_DATABASE.toString(), "Absolute path to database folder with optimization results:");
 		map.put(PROCESSED_FEATURE_DATABASE.toString(), "Absolute path to database folder with processed features:");
 		map.put(MEASURE_DATABASE.toString(), "Absolute path to database folder with validation results:");
 		map.put(MODEL_DATABASE.toString(), "Absolute path to database folder with classification models:");

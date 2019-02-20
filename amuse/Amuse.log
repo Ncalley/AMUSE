@@ -1456,3 +1456,99 @@
 21:18:06,334 12739362 [Thread-132] DEBUG amuse.nodes.extractor.methods.YaleAdapter - ...Extraction succeeded
 13:47:31,085 0    [main] INFO  class amuse.preferences.AmusePreferences - Using the environment variable 'AMUSEHOME'
 13:47:31,239 154  [main] INFO  amuse.scheduler.Scheduler - Scheduler started...
+15:42:07,474 0    [main] INFO  class amuse.preferences.AmusePreferences - Using the environment variable 'AMUSEHOME'
+15:42:07,702 228  [main] INFO  amuse.scheduler.Scheduler - Scheduler started...
+15:53:01,953 0    [main] INFO  class amuse.preferences.AmusePreferences - Using the environment variable 'AMUSEHOME'
+15:53:02,098 145  [main] INFO  amuse.scheduler.Scheduler - Scheduler started...
+16:14:00,112 0    [main] INFO  class amuse.preferences.AmusePreferences - Using the environment variable 'AMUSEHOME'
+16:14:00,327 215  [main] INFO  amuse.scheduler.Scheduler - Scheduler started...
+16:14:05,901 5789 [AWT-EventQueue-0] INFO  class amuse.data.ProcessingHistory - No Processing history file found! Creating empty history file...
+16:15:41,055 0    [main] INFO  class amuse.preferences.AmusePreferences - Using the environment variable 'AMUSEHOME'
+16:15:41,197 142  [main] INFO  amuse.scheduler.Scheduler - Scheduler started...
+17:37:10,848 0    [main] INFO  class amuse.preferences.AmusePreferences - Using the environment variable 'AMUSEHOME'
+17:37:10,997 149  [main] INFO  amuse.scheduler.Scheduler - Scheduler started...
+17:39:47,765 156917 [AWT-EventQueue-0] INFO  class amuse.data.ProcessingHistory - No Processing history file found! Creating empty history file...
+17:41:09,034 238186 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\feature_def_rms512.arff
+17:41:09,036 238188 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Katekyo Hitman Reborn opening 2 [Boys & Girls].wav
+17:41:09,039 238191 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Katekyo Hitman Reborn opening 2 [Boys & Girls]_Yale_features.arff
+17:41:09,042 238194 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Yale\Katekyo Hitman Reborn opening 2 [Boys & Girls]_14.arff
+17:41:09,044 238196 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Yale\Katekyo Hitman Reborn opening 2 [Boys & Girls]_16.arff
+17:41:09,046 238198 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Yale\Katekyo Hitman Reborn opening 2 [Boys & Girls]_17.arff
+17:41:09,048 238200 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Yale\Katekyo Hitman Reborn opening 2 [Boys & Girls]_18.arff
+17:41:09,051 238203 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Yale\Katekyo Hitman Reborn opening 2 [Boys & Girls]_19.arff
+17:41:09,054 238206 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Yale\Katekyo Hitman Reborn opening 2 [Boys & Girls]_2.arff
+17:41:09,056 238208 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Yale\Katekyo Hitman Reborn opening 2 [Boys & Girls]_20.arff
+17:41:09,059 238211 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Yale\Katekyo Hitman Reborn opening 2 [Boys & Girls]_204.arff
+17:41:09,061 238213 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Yale\Katekyo Hitman Reborn opening 2 [Boys & Girls]_205.arff
+17:41:09,063 238215 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Yale\Katekyo Hitman Reborn opening 2 [Boys & Girls]_207.arff
+17:41:09,066 238218 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Yale\Katekyo Hitman Reborn opening 2 [Boys & Girls]_21.arff
+17:41:09,069 238221 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Yale\Katekyo Hitman Reborn opening 2 [Boys & Girls]_211.arff
+17:41:09,072 238224 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Yale\Katekyo Hitman Reborn opening 2 [Boys & Girls]_212.arff
+17:41:09,074 238226 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Yale\Katekyo Hitman Reborn opening 2 [Boys & Girls]_213.arff
+17:41:09,078 238230 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Yale\Katekyo Hitman Reborn opening 2 [Boys & Girls]_214.arff
+17:41:09,083 238235 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Yale\Katekyo Hitman Reborn opening 2 [Boys & Girls]_215.arff
+17:41:09,088 238240 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Yale\Katekyo Hitman Reborn opening 2 [Boys & Girls]_25.arff
+17:41:09,093 238245 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Yale\Katekyo Hitman Reborn opening 2 [Boys & Girls]_29.arff
+17:41:09,096 238248 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Yale\Katekyo Hitman Reborn opening 2 [Boys & Girls]_3.arff
+17:41:09,099 238251 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Yale\Katekyo Hitman Reborn opening 2 [Boys & Girls]_30.arff
+17:41:09,101 238253 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Yale\Katekyo Hitman Reborn opening 2 [Boys & Girls]_31.arff
+17:41:09,104 238256 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Yale\Katekyo Hitman Reborn opening 2 [Boys & Girls]_32.arff
+17:41:09,110 238262 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Yale\Katekyo Hitman Reborn opening 2 [Boys & Girls]_33.arff
+17:41:09,112 238264 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Yale\Katekyo Hitman Reborn opening 2 [Boys & Girls]_401.arff
+17:41:09,114 238266 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Yale\Katekyo Hitman Reborn opening 2 [Boys & Girls]_405.arff
+17:41:09,117 238269 [Thread-3] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_127\1\Yale\Katekyo Hitman Reborn opening 2 [Boys & Girls]_406.arff
+17:41:09,123 238275 [Thread-3] DEBUG amuse.scheduler.taskstarters.FeatureExtractionStarter - Feature table loaded
+17:41:09,306 238458 [Thread-3] DEBUG amuse.nodes.extractor.methods.JAudioAdapter - Feature with ID '1' will be extracted with jAudio
+17:41:09,307 238459 [Thread-3] DEBUG amuse.nodes.extractor.methods.JAudioAdapter - Feature with ID '28' will be extracted with jAudio
+17:41:09,308 238460 [Thread-3] DEBUG amuse.nodes.extractor.methods.JAudioAdapter - Feature with ID '407' will be extracted with jAudio
+17:41:09,312 238464 [Thread-3] DEBUG amuse.nodes.extractor.methods.JAudioAdapter - Feature with ID '402' will be extracted with jAudio
+17:41:09,313 238465 [Thread-3] DEBUG amuse.nodes.extractor.methods.JAudioAdapter - Feature with ID '22' will be extracted with jAudio
+17:41:09,314 238466 [Thread-3] DEBUG amuse.nodes.extractor.methods.JAudioAdapter - Feature with ID '0' will be extracted with jAudio
+17:41:09,315 238467 [Thread-3] DEBUG amuse.nodes.extractor.methods.JAudioAdapter - Feature with ID '4' will be extracted with jAudio
+17:41:09,320 238472 [Thread-3] DEBUG amuse.nodes.extractor.methods.JAudioAdapter - Feature with ID '6' will be extracted with jAudio
+17:41:09,543 238695 [Thread-3] DEBUG amuse.scheduler.taskstarters.FeatureExtractionStarter - jAudio base script converted
+17:41:09,561 238713 [Thread-3] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '401' will be extracted with Yale
+17:41:09,564 238716 [Thread-3] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '405' will be extracted with Yale
+17:41:09,565 238717 [Thread-3] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '406' will be extracted with Yale
+17:41:09,566 238718 [Thread-3] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '3' will be extracted with Yale
+17:41:09,566 238718 [Thread-3] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '32' will be extracted with Yale
+17:41:09,569 238721 [Thread-3] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '33' will be extracted with Yale
+17:41:09,571 238723 [Thread-3] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '2' will be extracted with Yale
+17:41:09,572 238724 [Thread-3] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '14' will be extracted with Yale
+17:41:09,572 238724 [Thread-3] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '211' will be extracted with Yale
+17:41:09,573 238725 [Thread-3] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '212' will be extracted with Yale
+17:41:09,573 238725 [Thread-3] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '213' will be extracted with Yale
+17:41:09,574 238726 [Thread-3] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '214' will be extracted with Yale
+17:41:09,574 238726 [Thread-3] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '215' will be extracted with Yale
+17:41:09,575 238727 [Thread-3] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '16' will be extracted with Yale
+17:41:09,580 238732 [Thread-3] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '25' will be extracted with Yale
+17:41:09,581 238733 [Thread-3] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '21' will be extracted with Yale
+17:41:09,582 238734 [Thread-3] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '19' will be extracted with Yale
+17:41:09,582 238734 [Thread-3] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '20' will be extracted with Yale
+17:41:09,583 238735 [Thread-3] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '207' will be extracted with Yale
+17:41:09,583 238735 [Thread-3] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '205' will be extracted with Yale
+17:41:09,584 238736 [Thread-3] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '204' will be extracted with Yale
+17:41:09,588 238740 [Thread-3] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '29' will be extracted with Yale
+17:41:09,590 238742 [Thread-3] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '30' will be extracted with Yale
+17:41:09,590 238742 [Thread-3] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '31' will be extracted with Yale
+17:41:09,591 238743 [Thread-3] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '17' will be extracted with Yale
+17:41:09,591 238743 [Thread-3] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '18' will be extracted with Yale
+17:41:09,622 238774 [Thread-3] DEBUG amuse.scheduler.taskstarters.FeatureExtractionStarter - Yale base script converted
+17:41:09,633 238785 [Thread-3] DEBUG amuse.nodes.extractor.methods.MatlabAdapter - Feature with ID '45' will be extracted with Matlab
+17:41:09,634 238786 [Thread-3] DEBUG amuse.nodes.extractor.methods.MatlabAdapter - Feature with ID '46' will be extracted with Matlab
+17:41:09,634 238786 [Thread-3] DEBUG amuse.nodes.extractor.methods.MatlabAdapter - Feature with ID '47' will be extracted with Matlab
+17:41:09,635 238787 [Thread-3] DEBUG amuse.nodes.extractor.methods.MatlabAdapter - Feature with ID '400' will be extracted with Matlab
+17:41:09,635 238787 [Thread-3] DEBUG amuse.nodes.extractor.methods.MatlabAdapter - Feature with ID '200' will be extracted with Matlab
+17:41:09,636 238788 [Thread-3] DEBUG amuse.nodes.extractor.methods.MatlabAdapter - Feature with ID '7' will be extracted with Matlab
+17:41:09,636 238788 [Thread-3] DEBUG amuse.nodes.extractor.methods.MatlabAdapter - Feature with ID '10' will be extracted with Matlab
+17:41:09,640 238792 [Thread-3] DEBUG amuse.scheduler.taskstarters.FeatureExtractionStarter - Matlab base script converted
+17:41:09,650 238802 [Thread-4] DEBUG amuse.nodes.extractor.ExtractorNodeScheduler - amuse.nodes.extractor.ExtractorNodeScheduler thread started
+17:41:09,651 238803 [Thread-4] INFO  amuse.nodes.extractor.ExtractorNodeScheduler - Extractor node scheduler for Chacha\100701.wav configured; starting decoding..
+17:41:09,681 238833 [Thread-4] INFO  amuse.util.audio.AudioFileConversion - Converting 100701.mp3 to wave.
+17:41:10,009 239161 [Thread-4] DEBUG amuse.util.audio.AudioFileConversion - Starting: tmp_100701.mp3 44100kHz, 2
+17:45:34,081 1    [main] INFO  class amuse.preferences.AmusePreferences - Using the environment variable 'AMUSEHOME'
+17:45:34,229 149  [main] INFO  amuse.scheduler.Scheduler - Scheduler started...
+17:46:42,067 0    [main] INFO  class amuse.preferences.AmusePreferences - Using the environment variable 'AMUSEHOME'
+17:46:42,214 147  [main] INFO  amuse.scheduler.Scheduler - Scheduler started...
+17:48:22,711 0    [main] INFO  class amuse.preferences.AmusePreferences - Using the environment variable 'AMUSEHOME'
+17:48:22,847 136  [main] INFO  amuse.scheduler.Scheduler - Scheduler started...

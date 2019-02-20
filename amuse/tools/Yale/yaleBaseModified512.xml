@@ -6,7 +6,7 @@
         <parameter key="first_sample" value="0"/>
         <parameter key="number_of_samples" value="-1"/>
         <parameter key="random_sample" value="false"/>
-        <parameter key="source_dir" value="C:\Users\NICOLAS\Documents\Cours\M2\Eclipse\amuse\\config\node\extractor\input\task_127\1"/>
+        <parameter key="source_dir" value="../input"/>
         <parameter key="use_interval_attributes" value="false"/>
         <operator class="OperatorChain" name="Preprocessing">
             <operator class="MultivariateWindowing" name="MultivariateWindowing">
@@ -244,7 +244,7 @@
                 </operator>
             </operator>
             <operator class="GnuPlotWriter" name="GnuPlotWriter">
-                <parameter key="output_file" value="C:\Users\NICOLAS\Documents\Cours\M2\Eclipse\amuse\\config\node\extractor\input\task_127\1\Katekyo Hitman Reborn opening 2 [Boys &amp; Girls]_Yale_features.arff"/>
+                <parameter key="output_file" value="extractedFeatures.txt"/>
             </operator>
         </operator>
     </operator>

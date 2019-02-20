@@ -2,7 +2,7 @@
 <batchFile>
 	<batch ID="test">
 		<fileSet>
-			<file>C:\Users\NICOLAS\Documents\Cours\M2\Eclipse\amuse\\config\node\extractor\input\task_127\1\Katekyo Hitman Reborn opening 2 [Boys &amp; Girls].wav</file>
+			<file>test.mp3</file>
 		</fileSet>
 		<settings>
 			<windowSize>512</windowSize>
@@ -684,7 +684,7 @@
 				<attribute>100</attribute>
 			</feature>
 		</settings>
-		<destination>C:\Users\NICOLAS\Documents\Cours\M2\Eclipse\amuse\\config\node\extractor\input\task_127\1\feature_def_rms512.arff</destination>
-		<destination>C:\Users\NICOLAS\Documents\Cours\M2\Eclipse\amuse\\config\node\extractor\input\task_127\1\Katekyo Hitman Reborn opening 2 [Boys &amp; Girls]_jAudio_features.arff</destination>
+		<destination>feature_def_rms512.arff</destination>
+		<destination>feature_values_rms512.arff</destination>
 	</batch>
 </batchFile>
