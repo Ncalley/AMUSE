@@ -1552,3 +1552,27 @@
 17:46:42,214 147  [main] INFO  amuse.scheduler.Scheduler - Scheduler started...
 17:48:22,711 0    [main] INFO  class amuse.preferences.AmusePreferences - Using the environment variable 'AMUSEHOME'
 17:48:22,847 136  [main] INFO  amuse.scheduler.Scheduler - Scheduler started...
+17:52:53,914 0    [main] INFO  class amuse.preferences.AmusePreferences - Using the environment variable 'AMUSEHOME'
+17:52:54,066 152  [main] INFO  amuse.scheduler.Scheduler - Scheduler started...
+17:54:30,600 0    [main] INFO  class amuse.preferences.AmusePreferences - Using the environment variable 'AMUSEHOME'
+17:54:30,632 0    [main] INFO  class amuse.preferences.AmusePreferences - Using the environment variable 'AMUSEHOME'
+17:54:30,750 150  [main] INFO  amuse.scheduler.Scheduler - Scheduler started...
+17:54:30,799 167  [main] INFO  amuse.scheduler.Scheduler - Scheduler started...
+17:54:54,596 0    [main] INFO  class amuse.preferences.AmusePreferences - Using the environment variable 'AMUSEHOME'
+17:54:54,734 138  [main] INFO  amuse.scheduler.Scheduler - Scheduler started...
+18:02:06,498 431902 [Thread-7] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_0\1\monotmp_100701.wav
+18:02:06,501 431905 [Thread-7] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_0\1\tmp_100701.mp3
+18:02:06,504 431908 [Thread-7] DEBUG amuse.util.FileOperations - Deleting: C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\config\node\extractor\input\task_0\1\tmp_100701.wav
+18:02:06,510 431914 [Thread-7] DEBUG amuse.scheduler.taskstarters.FeatureExtractionStarter - Feature table loaded
+18:02:06,625 432029 [Thread-7] DEBUG amuse.nodes.extractor.methods.JAudioAdapter - Feature with ID '1' will be extracted with jAudio
+18:02:06,627 432031 [Thread-7] DEBUG amuse.nodes.extractor.methods.JAudioAdapter - Feature with ID '0' will be extracted with jAudio
+18:02:06,628 432032 [Thread-7] DEBUG amuse.nodes.extractor.methods.JAudioAdapter - Feature with ID '4' will be extracted with jAudio
+18:02:06,630 432034 [Thread-7] DEBUG amuse.nodes.extractor.methods.JAudioAdapter - Feature with ID '6' will be extracted with jAudio
+18:02:06,669 432073 [Thread-7] DEBUG amuse.scheduler.taskstarters.FeatureExtractionStarter - jAudio base script converted
+18:02:06,686 432090 [Thread-7] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '3' will be extracted with Yale
+18:02:06,689 432093 [Thread-7] DEBUG amuse.nodes.extractor.methods.YaleAdapter - Feature with ID '2' will be extracted with Yale
+18:02:06,710 432114 [Thread-7] DEBUG amuse.scheduler.taskstarters.FeatureExtractionStarter - Yale base script converted
+18:02:06,715 432119 [Thread-8] DEBUG amuse.nodes.extractor.ExtractorNodeScheduler - amuse.nodes.extractor.ExtractorNodeScheduler thread started
+18:02:06,715 432119 [Thread-8] INFO  amuse.nodes.extractor.ExtractorNodeScheduler - Extractor node scheduler for Chacha\100701.wav configured; starting decoding..
+18:02:06,734 432138 [Thread-8] INFO  amuse.util.audio.AudioFileConversion - Converting 100701.mp3 to wave.
+18:02:07,018 432422 [Thread-8] DEBUG amuse.util.audio.AudioFileConversion - Starting: tmp_100701.mp3 44100kHz, 2

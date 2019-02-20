@@ -106,7 +106,7 @@
 			</feature>
 			<feature>
 				<name>MFCC</name>
-				<active>true</active>
+				<active>false</active>
 				<attribute>13</attribute>
 			</feature>
 			<feature>
@@ -175,7 +175,7 @@
 			</feature>
 			<feature>
 				<name>Beat Sum</name>
-				<active>true</active>
+				<active>false</active>
 			</feature>
 			<feature>
 				<name>Standard Deviation of Spectral Variability</name>
@@ -454,7 +454,7 @@
 			</feature>
 			<feature>
 				<name>Strength Of Strongest Beat</name>
-				<active>true</active>
+				<active>false</active>
 			</feature>
 			<feature>
 				<name>Standard Deviation of Beat Sum</name>
@@ -478,7 +478,7 @@
 			</feature>
 			<feature>
 				<name>Spectral Flux</name>
-				<active>true</active>
+				<active>false</active>
 			</feature>
 			<feature>
 				<name>Standard Deviation of Strength Of Strongest Beat</name>

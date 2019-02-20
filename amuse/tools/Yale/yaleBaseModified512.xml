@@ -17,25 +17,7 @@
                     <operator class="Branching" name="Branching">
                         
                         
-                        <operator class="OperatorChain" name="BeatHistogramFeatures">
-                            <operator class="AutoCorrelation" name="Correlation">
-                                <parameter key="end" value="300"/>
-                                <parameter key="start" value="40"/>
-                            </operator>
-                            <operator class="Branching" name="TempoFeatures">
-                                <operator class="MinIndex" name="TempoFinder ID=401">
-                                </operator>
-                                
-                                <operator class="OperatorChain" name="PeriodsOfFirstAndSecondPeaks">
-                                    <operator class="PeakFinder" name="PeakFinder">
-                                        <parameter key="number_of_peaks" value="2"/>
-                                    </operator>
-                                    <operator class="Selection" name="PeriodsOfFirstAndSecondPeaks ID=405,406">
-                                        <parameter key="feature_indices" value="1,4"/>
-                                    </operator>
-                                </operator>
-                            </operator>
-                        </operator>
+                        
                         <operator class="OperatorChain" name="ZeroCrossingsDifference ID=3">
                             <operator class="ZeroCrossingFilter" name="ZeroCrossingFilter">
                             </operator>
@@ -44,30 +26,7 @@
                             <operator class="Average" name="DifferenceAverage (2)">
                             </operator>
                         </operator>
-                        <operator class="OperatorChain" name="PhaseSpaceChain">
-                            <operator class="PhaseSpaceTransformation" name="PhaseSpaceTransformation">
-                            </operator>
-                            <operator class="Branching" name="AnglesAndDistances">
-                                <operator class="OperatorChain" name="Angles ID=32">
-                                    <operator class="AngleTransformation" name="Angles">
-                                    </operator>
-                                    <operator class="Average" name="AngleAverage">
-                                    </operator>
-                                    	<operator class="Selection" name="SelectAngleAverage">
-                                    <parameter key="feature_indices" value="0"/>
-                                    </operator>
-                                </operator>
-                                <operator class="OperatorChain" name="Distances ID=33">
-                                    <operator class="DistanceTransformation" name="Distances">
-                                    </operator>
-                                    <operator class="Average" name="DistanceAverage">
-                                    </operator>
-                                    <operator class="Selection" name="SelectDistanceAverage">
-                                        <parameter key="feature_indices" value="0"/>
-                                    </operator>
-                                </operator>
-                            </operator>
-                        </operator>
+                        
                         <operator class="OperatorChain" name="FFTChain">
                             <operator class="WindowFunction" name="Hanning">
                             </operator>
@@ -85,159 +44,17 @@
                             	      <operator class="Average" name="DifferenceAverage">
                             	      </operator>
                         	    </operator>
-				<operator class="Centroid" name="Centroid ID=14">
-                                </operator>
-                                <operator class="OperatorChain" name="FrequencyPeaksChain">
-                                    <operator class="PeakFinder" name="FrequencyPeaks ID=201,202,203">
-                                    </operator>
-                                </operator>
-                                <operator class="OperatorChain" name="BandwidthChain ID=16">
-                                    <operator class="Bandwidth" name="Bandwidth">
-                                    </operator>
-                                    <operator class="Selection" name="Selection (2)">
-                                        <parameter key="feature_indices" value="0"/>
-                                    </operator>
-                                </operator>
-										  <operator class="BandEnergyRatio" name="BandEnergyRatio ID=25">
-                                		<parameter key="subband_number" value="4"/>
-                                </operator>
-                                <operator class="RolloffFunction" name="RolloffFunction ID=21">
-                                </operator>
-                                <operator class="OperatorChain" name="SpectralCrestFactorChain ID=19">
-                                    <operator class="Branching" name="SubBandGenerators">
-                                        <operator class="OperatorChain" name="250-500 Hz">
-                                            <operator class="SelectDisplacementsInterval" name="SelectDisplacementsInterval">
-                                                <parameter key="max_displacement" value="500.0"/>
-                                                <parameter key="min_displacement" value="250.0"/>
-                                            </operator>
-                                            <operator class="CombinedFunction" name="SpectralCrestFactor ID=19">
-                                                <operator class="Max" name="SpecMax">
-                                                </operator>
-                                                <operator class="Average" name="SpecArithAvg">
-                                                </operator>
-                                            </operator>
-                                        </operator>
-                                        <operator class="OperatorChain" name="500-1000 Hz">
-                                            <operator class="SelectDisplacementsInterval" name="SelectDisplacementsInterval (2)">
-                                                <parameter key="max_displacement" value="1000.0"/>
-                                                <parameter key="min_displacement" value="500.0"/>
-                                            </operator>
-                                            <operator class="CombinedFunction" name="SpectralCrestFactor ID=19 (2)">
-                                                <operator class="Max" name="SpecMax (2)">
-                                                </operator>
-                                                <operator class="Average" name="SpecArithAvg (2)">
-                                                </operator>
-                                            </operator>
-                                        </operator>
-                                        <operator class="OperatorChain" name="1000-2000 Hz">
-                                            <operator class="SelectDisplacementsInterval" name="SelectDisplacementsInterval (3)">
-                                                <parameter key="max_displacement" value="2000.0"/>
-                                                <parameter key="min_displacement" value="1000.0"/>
-                                            </operator>
-                                            <operator class="CombinedFunction" name="SpectralCrestFactor ID=19 (3)">
-                                                <operator class="Max" name="SpecMax (3)">
-                                                </operator>
-                                                <operator class="Average" name="SpecArithAvg (3)">
-                                                </operator>
-                                            </operator>
-                                        </operator>
-                                        <operator class="OperatorChain" name="2000-4000 Hz">
-                                            <operator class="SelectDisplacementsInterval" name="SelectDisplacementsInterval (4)">
-                                                <parameter key="max_displacement" value="4000.0"/>
-                                                <parameter key="min_displacement" value="2000.0"/>
-                                            </operator>
-                                            <operator class="CombinedFunction" name="SpectralCrestFactor ID=19 (4)">
-                                                <operator class="Max" name="SpecMax (4)">
-                                                </operator>
-                                                <operator class="Average" name="SpecArithAvg (4)">
-                                                </operator>
-                                            </operator>
-                                        </operator>
-                                    </operator>
-                                </operator>
-                                <operator class="OperatorChain" name="SpectralFlatnessMeasureChain ID=20">
-                                    <operator class="Branching" name="SubBandGenerators (2)">
-                                        <operator class="OperatorChain" name="250-500 Hz (2)">
-                                            <operator class="SelectDisplacementsInterval" name="SelectDisplacementsInterval (5)">
-                                                <parameter key="max_displacement" value="500.0"/>
-                                                <parameter key="min_displacement" value="250.0"/>
-                                            </operator>
-                                            <operator class="CombinedFunction" name="SpectralFlatnessMeasure ID=20">
-                                                <operator class="Average" name="SpecGeomAverage">
-                                                    <parameter key="mean_type" value="geometric mean"/>
-                                                </operator>
-                                                <operator class="Average" name="SpecArithAverage">
-                                                </operator>
-                                            </operator>
-                                        </operator>
-                                        <operator class="OperatorChain" name="500-1000 Hz (2)">
-                                            <operator class="SelectDisplacementsInterval" name="SelectDisplacementsInterval (6)">
-                                                <parameter key="max_displacement" value="1000.0"/>
-                                                <parameter key="min_displacement" value="500.0"/>
-                                            </operator>
-                                            <operator class="CombinedFunction" name="SpectralFlatnessMeasure ID=20 (2)">
-                                                <operator class="Average" name="SpecGeomAverage (2)">
-                                                    <parameter key="mean_type" value="geometric mean"/>
-                                                </operator>
-                                                <operator class="Average" name="SpecArithAverage (2)">
-                                                </operator>
-                                            </operator>
-                                        </operator>
-                                        <operator class="OperatorChain" name="1000-2000 Hz (2)">
-                                            <operator class="SelectDisplacementsInterval" name="SelectDisplacementsInterval (7)">
-                                                <parameter key="max_displacement" value="2000.0"/>
-                                                <parameter key="min_displacement" value="1000.0"/>
-                                            </operator>
-                                            <operator class="CombinedFunction" name="SpectralFlatnessMeasure ID=20 (3)">
-                                                <operator class="Average" name="SpecGeomAverage (3)">
-                                                    <parameter key="mean_type" value="geometric mean"/>
-                                                </operator>
-                                                <operator class="Average" name="SpecArithAverage (3)">
-                                                </operator>
-                                            </operator>
-                                        </operator>
-                                        <operator class="OperatorChain" name="2000-4000 Hz (2)">
-                                            <operator class="SelectDisplacementsInterval" name="SelectDisplacementsInterval (8)">
-                                                <parameter key="max_displacement" value="4000.0"/>
-                                                <parameter key="min_displacement" value="2000.0"/>
-                                            </operator>
-                                            <operator class="CombinedFunction" name="SpectralFlatnessMeasure ID=20 (4)">
-                                                <operator class="Average" name="SpecGeomAverage (4)">
-                                                    <parameter key="mean_type" value="geometric mean"/>
-                                                </operator>
-                                                <operator class="Average" name="SpecArithAverage (4)">
-                                                </operator>
-                                            </operator>
-                                        </operator>
-                                    </operator>
-                                </operator>
-                                <operator class="OperatorChain" name="ChromagramChain">
-                                    <operator class="Frequency2CentTransformation" name="Frequency2CentTransformation">
-                                    </operator>
-                                    
-                                    <operator class="OperatorChain" name="FoldedChain">
-                                        <operator class="Cent2HalfToneTransformation" name="Cent2HalfToneTransformation">
-                                        </operator>
-                                        <operator class="MaxIndex" name="PositionOfMaxPeakOfFoldedHistogram ID=207">
-                                        </operator>
-                                        <operator class="Max" name="AmplitudeOfMaxPeakOfFoldedHistogram ID=205">
-                                        </operator>
-                                        <operator class="ChromaVector" name="ChromaVector ID=204">
-                                        </operator>
-                                    </operator>
-                                </operator>
+				
                                 
-                                <operator class="OperatorChain" name="LinearRegressionChain">
-                                    <operator class="LinearRegressionFunction" name="Slope,YAxisIntercept,Discrepancy ID=29,30,31 (2)">
-                                    </operator>
-                                </operator>
-                                <operator class="OperatorChain" name="MomentsChain">
-                                    <operator class="Moments" name="Moments">
-                                    </operator>
-                                    <operator class="Selection" name="Skewness,Kurtosis ID=17,18">
-                                        <parameter key="feature_indices" value="2,3"/>
-                                    </operator>
-                                </operator>
+                                
+										  
+                                
+                                
+                                
+                                
+                                
+                                
+                                
                             </operator>
                         </operator>
                     </operator>
