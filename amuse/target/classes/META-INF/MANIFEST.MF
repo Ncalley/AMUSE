@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Built-By: NICOLAS
-Class-Path: jama-1.0.3.jar xmlpull-1.1.3.4d_b4_min.jar log4j-1.2.16.ja
+Class-Path: jama-1.0.3.jar xmlpull-1.1.3.4d_b4_min.jar log4j-1.2.17.ja
  r miglayout-3.7.jar tritonus-share-0.3.7.4.jar xercesImpl-2.12.0.jar 
  xml-apis-1.4.01.jar xpp3-1.1.3.4.O.jar xstream-1.4.11.1.jar xpp3_min-
  1.1.4c.jar commons-codec-1.11.jar jhall-2.0.jar jlfgr-1_0.jar weka-st

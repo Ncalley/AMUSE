@@ -84,34 +84,34 @@
     </dependency>
   </dependencies>
   <properties>
-    <version.deeplearning4j-core>1.0.0-beta3</version.deeplearning4j-core>
-    <version.commons-codec>1.11</version.commons-codec>
-    <version.weka-stable>3.6.14</version.weka-stable>
-    <version.xercesImpl>2.12.0</version.xercesImpl>
-    <version.junit-jupiter>5.4.0</version.junit-jupiter>
-    <version.deeplearning4j-nn>1.0.0-beta3</version.deeplearning4j-nn>
-    <version.jama>1.0.3</version.jama>
-    <version.miglayout>3.7</version.miglayout>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <version.nd4j-native-platform>1.0.0-beta3</version.nd4j-native-platform>
     <version.jlfgr>1_0</version.jlfgr>
-    <version.rapidminer>5.3.015</version.rapidminer>
-    <version.jaudio>5.0</version.jaudio>
-    <version.tritonous-share>0.3.7.4</version.tritonous-share>
     <version.javafx-base>11.0.1</version.javafx-base>
-    <version.log4j>1.2.16</version.log4j>
-    <java.version>1.8</java.version>
-    <version.xmlpull>1.1.3.4d_b4_min</version.xmlpull>
-    <version.xpp3>1.1.3.4.O</version.xpp3>
-    <version.deeplearning4j-modelimport>1.0.0-beta3</version.deeplearning4j-modelimport>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <version.jl>1.0</version.jl>
     <version.datavec-api>1.0.0-beta3</version.datavec-api>
     <version.deeplearning4j-keras>0.9.1</version.deeplearning4j-keras>
-    <version.jhall>2.0</version.jhall>
+    <version.jama>1.0.3</version.jama>
+    <version.deeplearning4j-nn>1.0.0-beta3</version.deeplearning4j-nn>
+    <version.jl>1.0</version.jl>
+    <version.nd4j-native-platform>1.0.0-beta3</version.nd4j-native-platform>
+    <version.deeplearning4j-modelimport>1.0.0-beta3</version.deeplearning4j-modelimport>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <version.xmlpull>1.1.3.4d_b4_min</version.xmlpull>
+    <version.deeplearning4j-core>1.0.0-beta3</version.deeplearning4j-core>
+    <version.jaudio>5.0</version.jaudio>
+    <version.xpp3>1.1.3.4.O</version.xpp3>
+    <java.version>1.8</java.version>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <version.commons-codec>1.11</version.commons-codec>
+    <version.xercesImpl>2.12.0</version.xercesImpl>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <version.xstream>1.4.11.1</version.xstream>
+    <version.weka-stable>3.6.14</version.weka-stable>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <version.log4j>1.2.17</version.log4j>
+    <version.miglayout>3.7</version.miglayout>
+    <version.jhall>2.0</version.jhall>
+    <version.junit-jupiter>5.4.0</version.junit-jupiter>
+    <version.tritonous-share>0.3.7.4</version.tritonous-share>
+    <version.rapidminer>5.3.015</version.rapidminer>
   </properties>
 </project>
 

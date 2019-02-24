@@ -92,6 +92,8 @@ public class KerasController {
 			//String simpleMlp = new ClassPathResource(filePath).getFile().getPath();
 			model = KerasModelImport.importKerasSequentialModelAndWeights(filePath,true);
 			
+			
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -111,8 +113,14 @@ public class KerasController {
 	 * @param args
 	 */
 	public static void main(String... args) {
-		KerasController k = KerasController.getInstance();
-		k.init();
-		k.importFiles();
+		//KerasController k = KerasController.getInstance();
+		//k.init();
+		//k.importFiles();
+		
+		String lol = "lol";
+		
+		System.out.println(Double.parseDouble(lol));
+		
+		System.out.println(lol);
 	}
 }

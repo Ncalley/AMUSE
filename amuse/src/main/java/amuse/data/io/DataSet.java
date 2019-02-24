@@ -30,6 +30,10 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.nd4j.linalg.api.ndarray.INDArray;
+import org.nd4j.linalg.factory.Nd4j;
+
+import amuse.data.datasets.KerasSet;
 import amuse.data.io.attributes.Attribute;
 import amuse.data.io.attributes.NominalAttribute;
 import amuse.data.io.attributes.NumericAttribute;
@@ -128,34 +132,47 @@ public class DataSet extends DataSetAbstract {
      * @param exampleSet
      */
     public DataSet(ExampleSet exampleSet) {
-	this.name = exampleSet.getName();
-
-	// Create the attributes
-	Iterator<com.rapidminer.example.Attribute> it = exampleSet.getAttributes().allAttributes();
-	while (it.hasNext()) {
-	    com.rapidminer.example.Attribute a = it.next();
-	    if (a.isNumerical()) {
-		attributes.add(new NumericAttribute(a.getName(), new ArrayList<Double>()));
-	    } else {
-		attributes.add(new StringAttribute(a.getName(), new ArrayList<String>()));
-	    }
-	}
-
-	// Load the values
-	it = exampleSet.getAttributes().allAttributes();
-	int i = 0;
-	while (it.hasNext()) {
-	    com.rapidminer.example.Attribute a = it.next();
-	    for (int j = 0; j < exampleSet.size(); j++) {
-		if (a.isNumerical()) {
-		    attributes.get(i).addValue(exampleSet.getExample(j).getValue(a));
-		} else {
-		    String s = a.getMapping().mapIndex(new Double(exampleSet.getExample(j).getValue(a)).intValue());
-		    attributes.get(i).addValue(s);
+		this.name = exampleSet.getName();
+	
+		// Create the attributes
+		Iterator<com.rapidminer.example.Attribute> it = exampleSet.getAttributes().allAttributes();
+		while (it.hasNext()) {
+		    com.rapidminer.example.Attribute a = it.next();
+		    if (a.isNumerical()) {
+			attributes.add(new NumericAttribute(a.getName(), new ArrayList<Double>()));
+		    } else {
+			attributes.add(new StringAttribute(a.getName(), new ArrayList<String>()));
+		    }
 		}
-	    }
-	    i++;
-	}
+	
+		// Load the values
+		it = exampleSet.getAttributes().allAttributes();
+		int i = 0;
+		while (it.hasNext()) {
+		    com.rapidminer.example.Attribute a = it.next();
+		    for (int j = 0; j < exampleSet.size(); j++) {
+			if (a.isNumerical()) {
+			    attributes.get(i).addValue(exampleSet.getExample(j).getValue(a));
+			} else {
+			    String s = a.getMapping().mapIndex(new Double(exampleSet.getExample(j).getValue(a)).intValue());
+			    attributes.get(i).addValue(s);
+			}
+		    }
+		    i++;
+		}
+    }
+    
+    public DataSet(KerasSet set) {
+    	this.name = set.getName();
+    	
+    	int columns = set.getContent().columns();
+    	
+    	for(int i = 0; i<columns; i++) {
+    		for(Object elt : set.getContent().getColumn(i).data().asDouble()) {
+        		//Attribute a = new Attribute();
+        	}
+    	}
+    	
     }
 
     /**
@@ -248,6 +265,31 @@ public class DataSet extends DataSetAbstract {
 
 	// Create example set
 	return table.createExampleSet(labelAttribute, null, idAttribute);
+    }
+    
+    /**
+     * Generates ND4j Keras object INDArray from this dataSet
+     * Needs testing
+     * 
+     * @return ND4j INDArray
+     */
+    public KerasSet convertToKerasSet() {
+    	INDArray finalArray = Nd4j.create();
+    	
+    	// For each data
+    	for (int d = 0; d < getValueCount(); d++) {
+    	    Object[] data = new Object[attributes.size()];
+    	    
+    	    for (int a = 0; a < attributes.size(); a++) {
+	    		    
+    	    	data[a] = new Double(getAttribute(a).getValueAt(d).toString());
+    	    }
+    	    
+    	    //Filling the INDArray
+    	    //finalArray.add(Nd4j.cre);
+    	}
+    	 
+    	return new KerasSet(name,finalArray);
     }
 
     public final void saveToArffFile(File file) throws IOException {

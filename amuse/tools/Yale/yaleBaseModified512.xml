@@ -6,7 +6,7 @@
         <parameter key="first_sample" value="0"/>
         <parameter key="number_of_samples" value="-1"/>
         <parameter key="random_sample" value="false"/>
-        <parameter key="source_dir" value="../input"/>
+        <parameter key="source_dir" value="C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\\config\node\extractor\input\task_87\1"/>
         <parameter key="use_interval_attributes" value="false"/>
         <operator class="OperatorChain" name="Preprocessing">
             <operator class="MultivariateWindowing" name="MultivariateWindowing">
@@ -61,7 +61,7 @@
                 </operator>
             </operator>
             <operator class="GnuPlotWriter" name="GnuPlotWriter">
-                <parameter key="output_file" value="extractedFeatures.txt"/>
+                <parameter key="output_file" value="C:\Users\NICOLAS\Documents\Cours\M2\Projet industriel\AMUSE\amuse\\config\node\extractor\input\task_87\1\115601_Yale_features.arff"/>
             </operator>
         </operator>
     </operator>

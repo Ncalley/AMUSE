@@ -31,41 +31,11 @@ output_file_prefix = [output_dir,filesep,input_file(p(end)+1:k(end)-1),'_'];
 s = size(x);
 nwin = floor(1 + (s(1)-wlength)/woffset);
 
-	% compute CMRARE cepstral modulation features with polynomial order 3
-	res = f_45_CMRARE_start(input_file);
-	
-	% save the results
-	arff_saver_with_windows_number([output_file_prefix,'45.arff'],'CMRARE cepstral modulation features with polynomial order 3',res,110250);
-
-	% compute CMRARE cepstral modulation features with polynomial order 5
-	res = f_46_CMRARE_start(input_file);
-	
-	% save the results
-	arff_saver_with_windows_number([output_file_prefix,'46.arff'],'CMRARE cepstral modulation features with polynomial order 5',res,110250);
-
-	% compute CMRARE cepstral modulation features with polynomial order 10
-	res = f_47_CMRARE_start(input_file);
-	
-	% save the results
-	arff_saver_with_windows_number([output_file_prefix,'47.arff'],'CMRARE cepstral modulation features with polynomial order 10',res,110250);
-
-% compute duration of input file in seconds
-res = f_400_duration(input_file);
-
-% save the results
-arff_saver([output_file_prefix,'400.arff'],'Duration',res,-1);
-
 % compute the fundamental frequency
 ff = f_200_fundamental_freq(x,fs,wlength,woffset);
 
 % compute first two tristimulus values and normalized energy of harmonic components
 res = f_7_10_harmonic_analysis(x,fs,wlength,woffset,ff);
-
-% save the results
-arff_saver_with_windows_number([output_file_prefix,'200.arff'],'Fundamental frequency',ff);
-
-% save the results
-arff_saver_with_windows_number([output_file_prefix,'7.arff'],'Normalized energy of harmonic components',res(3,:));
 
 % save the results
 arff_saver_with_windows_number([output_file_prefix,'10.arff'],'Tristimulus',[res(1,:)' res(2,:)']');

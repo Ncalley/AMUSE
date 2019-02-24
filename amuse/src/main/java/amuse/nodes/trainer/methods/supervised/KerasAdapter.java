@@ -1,14 +1,27 @@
 package amuse.nodes.trainer.methods.supervised;
 
+import java.io.File;
 import java.io.IOException;
 
+import org.deeplearning4j.nn.modelimport.keras.KerasModelImport;
+import org.deeplearning4j.nn.modelimport.keras.exceptions.InvalidKerasConfigurationException;
+import org.deeplearning4j.nn.modelimport.keras.exceptions.UnsupportedKerasConfigurationException;
+import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
+import org.nd4j.linalg.api.ndarray.INDArray;
+import org.nd4j.linalg.factory.Nd4j;
+
+import amuse.data.io.DataSet;
+import amuse.data.io.DataSetInput;
 import amuse.interfaces.nodes.NodeException;
 import amuse.interfaces.nodes.methods.AmuseTask;
+import amuse.nodes.trainer.TrainingConfiguration;
 import amuse.nodes.trainer.interfaces.TrainerInterface;
+import amuse.preferences.AmusePreferences;
+import amuse.preferences.KeysStringValue;
 
 public class KerasAdapter extends AmuseTask implements TrainerInterface {
 
-	private String pathToModel = "";
+	private String pathToModel = AmusePreferences.get(KeysStringValue.KERAS_DATABASE);
 	
 
 	/**
@@ -17,9 +30,10 @@ public class KerasAdapter extends AmuseTask implements TrainerInterface {
 	@Override
 	public void setParameters(String parameterString) throws NodeException {
 		if(parameterString == "" || parameterString == null) {
-			pathToModel = "Keras/";
+			pathToModel = pathToModel + File.separator + "GenerateModel.py";
 		} else {
-			pathToModel = parameterString;
+			//It should never be used as I couldn't define any way to correctly set this (it should be in classifierAlgorithmTable.arff)
+			pathToModel = pathToModel + File.separator + parameterString;
 		}
 	}
 
@@ -38,22 +52,47 @@ public class KerasAdapter extends AmuseTask implements TrainerInterface {
 	 */
 	@Override
 	public void trainModel(String outputModel) throws NodeException {
-		/*
-		 *We execute the python model so it generates the file 
-		 */
+		DataSet dataSet = ((DataSetInput)((TrainingConfiguration)this.correspondingScheduler.getConfiguration()).getGroundTruthSource()).getDataSet();
+		
+		//We execute the python model so it generates the file 
+		 
 		try {
-			String command = "py "+pathToModel+outputModel;
+			
+			String command = "py "+pathToModel;
 			Process p = Runtime.getRuntime().exec(command);
+			
+			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
-			String command = "python "+pathToModel+outputModel;
+			
+			//The command isn't the same on Windows and Linux so we must try differently if it fails
+			String command = "python "+pathToModel;
 			try {
 				Process p = Runtime.getRuntime().exec(command);
 			} catch (IOException e1) {
-				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
+			
+		}
+		
+		try {
+			//We import the model with deepLearning4j
+			MultiLayerNetwork model = KerasModelImport.importKerasSequentialModelAndWeights(pathToModel);
+			
+			//Mapping the the inputs and outputs
+			INDArray input = dataSet.convertToKerasSet().getContent();
+			INDArray output = model.output(input);
+
+			//Training
+			model.fit(input, output);
+			
+			//model.
+			
+			//output.get
+			
+		} catch (IOException | InvalidKerasConfigurationException | UnsupportedKerasConfigurationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 
