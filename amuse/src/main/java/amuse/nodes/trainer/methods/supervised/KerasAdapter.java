@@ -10,6 +10,7 @@ import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.factory.Nd4j;
 
+import amuse.data.datasets.KerasSet;
 import amuse.data.io.DataSet;
 import amuse.data.io.DataSetInput;
 import amuse.interfaces.nodes.NodeException;
@@ -79,16 +80,24 @@ public class KerasAdapter extends AmuseTask implements TrainerInterface {
 			//We import the model with deepLearning4j
 			MultiLayerNetwork model = KerasModelImport.importKerasSequentialModelAndWeights(pathToModel);
 			
+			KerasSet trainingSet = dataSet.convertToKerasSet();
 			//Mapping the the inputs and outputs
-			INDArray input = dataSet.convertToKerasSet().getContent();
+			INDArray input = trainingSet.getContent();
 			INDArray output = model.output(input);
 
 			//Training
 			model.fit(input, output);
 			
-			//model.
+			//Setting the new content of the KerasSet
+			trainingSet.setContent(output);
 			
-			//output.get
+			try {
+				//Saving
+				dataSet = new DataSet(trainingSet);
+				dataSet.saveToArffFile(new File(outputModel));
+			} catch(IOException e) {
+				throw new NodeException("Could not save the data: " + e.getMessage());
+			}
 			
 		} catch (IOException | InvalidKerasConfigurationException | UnsupportedKerasConfigurationException e) {
 			// TODO Auto-generated catch block
