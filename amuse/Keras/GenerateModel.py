@@ -1,15 +1,12 @@
-from keras.models import Model
-from keras.layers import Input, Dense
-import arff
 
-a = Input(shape=(32,))
-b = Dense(32)(a)
-model = Model(inputs=a, outputs=b)
+from keras.models import Sequential
+from keras.layers import Dense
 
-#We load the arff file
-dataarff = arff.load(open('../Categories/Test.arff'),'rb')
-#print(data)
+#Creates a simple test model for keras to import
+# source : https://deeplearning4j.org/docs/latest/keras-import-overview
+model = Sequential()
+model.add(Dense(units=64, activation='relu', input_dim=2002))
+model.add(Dense(units=10, activation='softmax'))
+model.compile(loss='categorical_crossentropy',optimizer='sgd', metrics=['accuracy'])
 
-#We retrieve the data as a table
-data = dataarff.get("data")
-print(data[0][1])
+model.save('Models/model.h5')

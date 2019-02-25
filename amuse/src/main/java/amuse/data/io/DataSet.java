@@ -289,8 +289,17 @@ public class DataSet extends DataSetAbstract {
     	
     	KerasSet set = new KerasSet(this.name);
     	
+    	int rows = 1;
+    	int columns = 0;
+    	
+    	for (Attribute elt : attributes) {
+    		if(elt.getValueCount()>rows) {
+    			columns = elt.getValueCount();
+    		}
+    	}
+    	
     	//Every numeric data of the set
-    	INDArray finalArray = Nd4j.create();
+    	INDArray finalArray = Nd4j.zeros(rows, columns);
     	
     	
     	// For each data
