@@ -2,6 +2,7 @@ package amuse.data.datasets;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.factory.Nd4j;
@@ -9,7 +10,7 @@ import org.nd4j.linalg.factory.Nd4j;
 /**
  * A simple object that will keep both the data and the name of a DataSet when it will be exploited with Keras
  * As Keras can't exploit non numeric Data we ensure to properly save all the data to rebuild our DataSet later.
- * @author NCalley
+ * @author Nicolas Calley
  *
  */
 public class KerasSet {
@@ -24,6 +25,13 @@ public class KerasSet {
 	//An ensemble of Numeric values that Keras can exploit and train on
 	private INDArray content = Nd4j.create();
 	
+	//An ensemble of 0 and 1  contained in n dimensions (by default 1)
+	//1 -> the corresponding vector corresponds to the criteria
+	//0 -> the corresponding vector doesn't fit the criteria
+	private float [][] labelData = new float[1][];
+	
+	
+
 	public KerasSet(String name, INDArray content) {
 		this.name = name;
 		this.content = content;
@@ -41,6 +49,12 @@ public class KerasSet {
 	
 	public KerasSet(String name) {
 		this.name = name;
+	}
+	
+	
+	public INDArray getLabels() {
+		INDArray res = Nd4j.create(labelData);
+		return res;
 	}
 	
 	public KerasSet() {
@@ -68,6 +82,14 @@ public class KerasSet {
 
 	public void setHierarchy(Map<String,Object> hierarchy) {
 		this.hierarchy = hierarchy;
+	}
+	
+	public float[][] getLabelData() {
+		return labelData;
+	}
+
+	public void setLabelData(float[][] labelData) {
+		this.labelData = labelData;
 	}
 	
 }

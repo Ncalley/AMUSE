@@ -23,6 +23,13 @@ import amuse.preferences.AmusePreferences;
 import amuse.preferences.KeysStringValue;
 import amuse.util.AmuseLogger;
 
+/**
+ * Training using Keras loaded by deeplearning4j
+ * 
+ * See : https://deeplearning4j.org/
+ * @author Nicolas Calley
+ *
+ */
 public class KerasAdapter extends AmuseTask implements TrainerInterface {
 
 	private String pathToModel = AmusePreferences.get(KeysStringValue.KERAS_DATABASE);
