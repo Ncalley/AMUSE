@@ -165,12 +165,24 @@ public class DataSet extends DataSetAbstract {
     public DataSet(KerasSet set) {
     	this.name = set.getName();
     	
-    	int columns = set.getContent().columns();
+    	int i = 0 ;
     	
-    	for(int i = 0; i<columns; i++) {
-    		for(Object elt : set.getContent().getColumn(i).data().asDouble()) {
-        		//Attribute a = new Attribute();
-        	}
+    	for(String elt : set.getHierarchy().keySet()) {
+    		//if the value is an Int or a double
+    		if(set.getHierarchy().get(elt).getClass()== Integer.class || set.getHierarchy().get(elt).getClass()== Double.class) {
+    			
+    			//WARNING
+    			//this operation seems really time consuming, finding a better way of doing would be the best
+    			Double[] type = {};
+    			ArrayList<Double> objectValues = new ArrayList<>();
+    			for(double d : set.getContent().getColumn(i).toDoubleVector()) {
+    				objectValues.add(new Double(d));
+    			}
+    			attributes.add(new NumericAttribute(elt, objectValues.toArray(type)));		
+    		}else {
+    			//if the value is a String
+    			this.attributes.add((Attribute)set.getHierarchy().get(elt));
+    		}
     	}
     	
     }
@@ -274,22 +286,35 @@ public class DataSet extends DataSetAbstract {
      * @return ND4j INDArray
      */
     public KerasSet convertToKerasSet() {
+    	
+    	KerasSet set = new KerasSet(this.name);
+    	
+    	//Every numeric data of the set
     	INDArray finalArray = Nd4j.create();
     	
+    	
     	// For each data
-    	for (int d = 0; d < getValueCount(); d++) {
-    	    Object[] data = new Object[attributes.size()];
-    	    
-    	    for (int a = 0; a < attributes.size(); a++) {
-	    		    
-    	    	data[a] = new Double(getAttribute(a).getValueAt(d).toString());
-    	    }
-    	    
-    	    //Filling the INDArray
-    	    //finalArray.add(Nd4j.cre);
+    	for (Attribute elt : attributes) {
+    		if (elt.getName().equals("Id")) {
+				//if this attribute is an ID (integer)
+				set.getHierarchy().put(elt.getName(), new Integer(0));
+				finalArray.add(Nd4j.create(((NumericAttribute)elt).getValues()));
+		    } else if (elt.getName().equals("Category")) {
+		    	//if this attribute is a category (String)
+		    	set.getHierarchy().put(elt.getName(), elt);
+		    } else if (elt instanceof StringAttribute) {
+		    	//if this attribute is a StringAttribute (String)
+		    	set.getHierarchy().put(elt.getName(), elt);
+		    } else {
+		    	//if this attribute is a real (Double)
+		    	set.getHierarchy().put(elt.getName(), new Double(0));
+		    	finalArray.add(Nd4j.create(((NumericAttribute)elt).getValues()));
+		    }
+    		
+    	    set.setContent(finalArray);
     	}
     	 
-    	return new KerasSet(name,finalArray);
+    	return set;
     }
 
     public final void saveToArffFile(File file) throws IOException {

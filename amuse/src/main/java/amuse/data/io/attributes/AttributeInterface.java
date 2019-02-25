@@ -23,6 +23,8 @@
  */
 package amuse.data.io.attributes;
 
+import java.util.Collection;
+
 /**
  * This Interface describes basic funktionality offered by Attributes.
  * 
