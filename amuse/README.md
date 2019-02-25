@@ -1,4 +1,5 @@
-# AMUSE framework (Advanced MUsic Explorer)
+
+# AMUSE framework (Advanced Music Explorer)
 
 Copyright 2006-2017 by code authors
 
@@ -31,7 +32,34 @@ along with AMUSE. If not, see <http://www.gnu.org/licenses/>.
   integrating AMUSE into a proprietary software product
   not licensed under the AGPL.
  
+ ## Requirements :
+
+To run Amuse on Maven, ensure that you have Maven installed by running this command :
+``
+mvn -v
+``
+You need **Maven** with version 3.5.4 or later to run Amuse.
+If you don't have Maven installed, you can download and install it here :
+https://maven.apache.org/download.cgi
+
+To access every functionnality of Amuse, you may want to install Matlab.
+You can download Matlab here :
+https://fr.mathworks.com/downloads/
+
+If you want to use Amuse's classification **with Keras** you will need the following programs :
+
+ - **Python 3.7** : https://www.python.org/downloads/release/python-370/
+ - **TensorFlow** : https://www.tensorflow.org/install
+ - **Keras** : https://keras.io/#installation
+
+If you already have Python and are running on Windows 10, you can simply run the file install.bat located on amuse/Keras/ directory to automatically install Tensorflow and Keras with pip.
+
  ## Changelog :
+
+What's new on Amuse v0.3.2-SNAPSHOT :
+
+ - **Keras** is now live ! You can now train a model and classify files with amuse (This feature is still in it's alpha version and some bugs may still appear).
+ - A new **Requirements** section have been added to the README.
 
 What's new on Amuse v0.3.1-SNAPSHOT :
 
@@ -53,7 +81,7 @@ mvn clean package -DskipTests
 Once Amuse is compiled you can execute it, the following command will open Amuse's User Interface.
 
 ``
-java -jar target/Amuse-maven-0.3.1-SNAPSHOT.jar
+java -jar target/Amuse-maven-0.3.2-SNAPSHOT.jar
 ``
 
 To find further informations on Amuse's way of functionning, please read the **user_manual** located in the **docs** folder.
