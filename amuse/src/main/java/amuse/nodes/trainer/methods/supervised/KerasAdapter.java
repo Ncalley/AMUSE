@@ -60,26 +60,36 @@ public class KerasAdapter extends AmuseTask implements TrainerInterface {
 	public void trainModel(String outputModel) throws NodeException {
 		DataSet dataSet = ((DataSetInput)((TrainingConfiguration)this.correspondingScheduler.getConfiguration()).getGroundTruthSource()).getDataSet();
 		
-		//We execute the python model so it generates the file 
+		//We execute the python model so it regenerates the file 
+		//WARNING : for an unknown reason I can't run the python file from Java, you need to run it manually beforehand if there is no .h5 file in the Keras/Models directory
 		 
-		try {
+		/*try {
+			File oldModel = new File(pathToModel + File.separator + h5File);
+			if(oldModel.delete()) {
+				AmuseLogger.write(KerasAdapter.class.getName(), Level.INFO, "Old model file successfully deleted, generating a new one...");
+			}else {
+				AmuseLogger.write(KerasAdapter.class.getName(), Level.WARN, "Problem happened while deleting the old file, please delete it manually : "+oldModel.getAbsolutePath());
+			}
 			
 			String command = "py "+pythonFile;
-			Process p = Runtime.getRuntime().exec(command);
-			AmuseLogger.write(KerasAdapter.class.getName(), Level.INFO, "Model created !");
+			AmuseLogger.write(KerasAdapter.class.getName(), Level.INFO, command);
+			Runtime.getRuntime().exec(command);
+			
 			
 		} catch (IOException e) {
 			e.printStackTrace();
 			
 			//The command isn't the same on Windows and Linux so we must try differently if it fails
-			String command = "python "+pythonFile;
+			String command =  "python /c start python "+pythonFile;
 			try {
-				Process p = Runtime.getRuntime().exec(command);
+				Runtime.getRuntime().exec(command);
 			} catch (IOException e1) {
 				e1.printStackTrace();
 			}
 			
-		}
+		}*/
+		
+		AmuseLogger.write(KerasAdapter.class.getName(), Level.INFO, "Model created !");
 		
 		try {
 			//We import the model with deepLearning4j
