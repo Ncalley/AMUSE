@@ -85,7 +85,7 @@ public class KerasModelLoader extends AmuseTask implements ClassifierInterface {
 	        double yMin = -0.2;
 	        double yMax = 0.8;
 
-	        //(6) Evaluate the predictions at every point in the x/y input space
+	        //(5 Evaluate the predictions at every point in the x/y input space
 	        int nPointsPerAxis = 100;
 	        double[][] evalPoints = new double[nPointsPerAxis*nPointsPerAxis][2];
 	        int count = 0;
@@ -107,7 +107,7 @@ public class KerasModelLoader extends AmuseTask implements ClassifierInterface {
 	        INDArray testPredicted = model.output(kerasSet.getContent());
 
 	        
-	        // (7) Convert the results to AMUSE EditableDataSet
+	        // (6 Convert the results to AMUSE EditableDataSet
 	     	((ClassificationConfiguration)(this.correspondingScheduler.getConfiguration())).setInputToClassify(new DataSetInput(
 	     		new DataSet(kerasSet)));
 			
