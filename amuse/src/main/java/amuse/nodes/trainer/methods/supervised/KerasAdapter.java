@@ -32,7 +32,7 @@ import amuse.util.AmuseLogger;
  */
 public class KerasAdapter extends AmuseTask implements TrainerInterface {
 
-	private String pathToModel = AmusePreferences.get(KeysStringValue.KERAS_DATABASE);
+	private String pathToModel = this.correspondingScheduler.getHomeFolder();
 	private String pythonFile = "";
 	private String h5File = "Models" + File.separator + "model.h5";
 	

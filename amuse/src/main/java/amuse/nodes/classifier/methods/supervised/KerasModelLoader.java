@@ -36,7 +36,7 @@ import amuse.util.AmuseLogger;
  */
 public class KerasModelLoader extends AmuseTask implements ClassifierInterface {
 
-	private String pathToModel = AmusePreferences.get(KeysStringValue.KERAS_DATABASE);
+	private String pathToModel = this.correspondingScheduler.getHomeFolder();
 	private String h5File = "Models" + File.separator + "model.h5";
 	
     int numOutputs = 1;

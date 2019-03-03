@@ -9,6 +9,8 @@ amuse/Processed_Features/
 .project
 .classpath
 amuse/.pydevproject
+amuse/Amuse.log
+amuse/Amuse.log.*
 
 
 # Compiled source #

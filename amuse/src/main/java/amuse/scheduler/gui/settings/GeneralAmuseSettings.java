@@ -65,7 +65,6 @@ public class GeneralAmuseSettings extends AmuseSettingsPageBody {
 		settings.add(new PathSelectionPanel("Model Database", KeysStringValue.MODEL_DATABASE));
 		settings.add(new PathSelectionPanel("Measure Database", KeysStringValue.MEASURE_DATABASE));
 		settings.add(new PathSelectionPanel("Optimization Database", KeysStringValue.OPTIMIZATION_DATABASE));
-		settings.add(new PathSelectionPanel("Keras Database", KeysStringValue.KERAS_DATABASE));
 		for (EditableAmuseSettingInterface singlePref : settings) {
 			internalPanel.add(singlePref.getPanel());
 			watchForChanges(singlePref);
